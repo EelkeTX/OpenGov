@@ -1,0 +1,94 @@
+body {
+    background-repeat: no-repeat;
+    background-size: 1920px auto;
+    background-attachment: fixed;
+}
+[v-cloak] {
+    display: none;
+  }
+nav {
+    background-color: red;
+}
+nav a {
+    color: rgb(226, 226, 226);
+}
+.active a {
+    color: white;
+    font-weight: bolder;
+}
+nav a:hover {
+    color: white;
+}
+.dropdown-menu {
+    background-color: red;
+}
+.dropdown-menu a{
+    color: white;
+    font-weight: normal;
+}
+table {
+    width: 80%;
+    margin: 20px auto;
+}
+.intro {
+    background-color: white;
+    opacity: 0.9;
+}
+.dataforms {
+    background-color: rgba(0, 0, 255, 0.671);
+    opacity: 0.9;
+    border-radius: 0px 0 25px 25px;
+}
+h2, p, .form-check-inline, #stateSelect, button{
+    margin: 20px 20px;
+}
+h3{
+    margin-left: 40%;
+    margin-top: 20px;
+}
+table a {
+    color: white;
+}
+table a:hover {
+    color: rgba(255, 255, 255, 0.605);
+}
+table td,th {
+    color: white;
+}
+.table-hover tbody tr:hover td {
+    background: rgba(0, 145, 255, 0.671);;
+}
+.table {
+    background-color: rgba(0, 0, 255, 0.671);
+}
+.center {
+    width: 80%;
+    margin-top: 20px;
+    margin-left: 200px;
+}
+.form-control {
+    width: 58%;
+    margin-top: 20px;
+    margin-left: 20%;
+}
+.hidden {
+    display: none;
+}
+
+.slide-fade-enter-active {
+    transition: all .3s ease;
+}
+.slide-fade-leave-active {
+    transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+  /* .slide-fade-leave-active below version 2.1.8 */ {
+    transform: translateX(10px);
+    opacity: 0;
+}
+.fade-enter-active, .fade-leave-active {
+    transition: opacity 1s;
+  }
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+  }
