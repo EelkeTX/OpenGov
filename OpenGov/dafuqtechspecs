@@ -1,0 +1,6 @@
+            stagingSearch() {
+                for (let i = 0; i < this.stageSearchResults.length; i++)
+                if(!this.currentPlaylistTracks.includes(this.stageSearchResults[i].id))){
+                    this.currentPlaylistTracks.push(this.stageSearchResults[i]);
+                } 
+            }

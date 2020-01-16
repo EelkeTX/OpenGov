@@ -27,6 +27,31 @@ setTimeout(function () {        //see below for explanation
             currentSortDirAlt: 'asc',
             currentSortDirAltAlt: 'asc',
         },
+        mounted() {     //using this to look which page is loaded, then start the right method with the correct parameters
+            let fileName = location.href.split("/").slice(-1);
+            if (fileName[0] === "index.html"){
+                let showTable = this.tableShown = true;
+                setTimeout(showTable, 100);         //fancy slide fade hype
+            }
+            if (fileName[0] === "116senate.html"){
+                this.getMembers('senate');
+            }
+            if (fileName[0] === "116house.html"){
+                this.getMembers('house');
+            }
+            if (fileName[0] === "attsenate.html"){
+                this.getAttendance('senate', 'attendance');
+            }
+            if (fileName[0] === "atthouse.html"){
+                this.getAttendance('house', 'attendance');
+            }
+            if (fileName[0] === "loysenate.html"){
+                this.getAttendance('senate', 'loyalty');
+            }
+            if (fileName[0] === "loyhouse.html"){
+                this.getAttendance('house', 'loyalty');
+            }
+        },
         computed: {
             filteredParties() {         // filters table1 to only show those whose parties have checkmarks active
                 return this.table1.filter(members => this.checkedParties.includes(members.partyStr))
@@ -85,31 +110,6 @@ setTimeout(function () {        //see below for explanation
             },
             totalAvgWithParty: function() {     //taking the average of 3 averages to average an average average.
                 return ((Number(this.demAvgPerc) + Number(this.repAvgPerc) + Number(this.indAvgPerc))/3).toFixed(2);
-            }
-        },
-        mounted() {     //using this to look which page is loaded, the start the right method with the correct parameters
-            let fileName = location.href.split("/").slice(-1);
-            if (fileName[0] === "index.html"){
-                let showTable = this.tableShown = true;
-                setTimeout(showTable, 100);         //fancy slide fade hype
-            }
-            if (fileName[0] === "116senate.html"){
-                this.getMembers('senate');
-            }
-            if (fileName[0] === "116house.html"){
-                this.getMembers('house');
-            }
-            if (fileName[0] === "attsenate.html"){
-                this.getAttendance('senate', 'attendance');
-            }
-            if (fileName[0] === "atthouse.html"){
-                this.getAttendance('house', 'attendance');
-            }
-            if (fileName[0] === "loysenate.html"){
-                this.getAttendance('senate', 'loyalty');
-            }
-            if (fileName[0] === "loyhouse.html"){
-                this.getAttendance('house', 'loyalty');
             }
         },
         methods: {

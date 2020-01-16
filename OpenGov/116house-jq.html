@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>Project Murica AKA OpenGov</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="./style.css" rel="stylesheet" type="text/css">
+    </header>
+    <body style="background-color: rgba(0, 0, 255, 0.123)">
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand static-top mx-auto col-10 p-0">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="./images/eaglavatar.jpg" alt="murica" width="70px">
+                </a>
+                <div class="navbar" id="navbarResponsive">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown active">
+                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Congress 116
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="./116senate.html">Senate</a>
+                                <a class="dropdown-item" href="./116house.html">House</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Attendance
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="./attsenate.html">Senate</a>
+                                <a class="dropdown-item" href="./atthouse.html">House</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Party Loyalty
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="./loysenate.html">Senate</a>
+                                <a class="dropdown-item" href="./loyhouse.html">House</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container intro col-10 p-0">
+            <div class="row">
+                <div class="col">
+                    <h2>Congressmen</h2>
+                    <p>The major power of the House is to pass federal legislation that affects the entire country, 
+                    although its bills must also be passed by the Senate and further agreed to by the U.S. 
+                    President before becoming law (unless both the House and Senate re-pass the legislation with
+                    a two-thirds majority in each chamber). The House has some exclusive powers: the power to 
+                    initiate revenue bills, to impeach officials (impeached officials are subsequently tried in the 
+                    Senate), and to elect the U.S. President in case there is no majority in the Electoral College.</p>
+                    <p>Each U.S. state is represented in the House in proportion to its population as measured in the 
+                    census, but every state is entitled to at least one representative.</p>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col col-10 mx-auto">
+                                <div class="input-group-prepend">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="demBox" value="demSel" checked>
+                                        <label class="form-check-label" for="demBox">Democrats</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="repBox" value="repSel" checked>
+                                        <label class="form-check-label" for="repBox">Republicans</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="indBox" value="indSel" checked>
+                                        <label class="form-check-label" for="indBox">Independants</label>
+                                    </div>
+                                    <select class="custom-select my-auto" id="selState">
+                                        <option value="">All States</option>
+                                        <option value=""></option>
+                                        <option value="AL">Alabama</option>
+                                        <option value="AK">Alaska</option>
+                                        <option value="AZ">Arizona</option>
+                                        <option value="AR">Arkansas</option>
+                                        <option value="CA">California</option>
+                                        <option value="CO">Colorado</option>
+                                        <option value="CT">Connecticut</option>
+                                        <option value="DE">Delaware</option>
+                                        <option value="DC">District Of Columbia</option>
+                                        <option value="FL">Florida</option>
+                                        <option value="GA">Georgia</option>
+                                        <option value="HI">Hawaii</option>
+                                        <option value="ID">Idaho</option>
+                                        <option value="IL">Illinois</option>
+                                        <option value="IN">Indiana</option>
+                                        <option value="IA">Iowa</option>
+                                        <option value="KS">Kansas</option>
+                                        <option value="KY">Kentucky</option>
+                                        <option value="LA">Louisiana</option>
+                                        <option value="ME">Maine</option>
+                                        <option value="MD">Maryland</option>
+                                        <option value="MA">Massachusetts</option>
+                                        <option value="MI">Michigan</option>
+                                        <option value="MN">Minnesota</option>
+                                        <option value="MS">Mississippi</option>
+                                        <option value="MO">Missouri</option>
+                                        <option value="MT">Montana</option>
+                                        <option value="NE">Nebraska</option>
+                                        <option value="NV">Nevada</option>
+                                        <option value="NH">New Hampshire</option>
+                                        <option value="NJ">New Jersey</option>
+                                        <option value="NM">New Mexico</option>
+                                        <option value="NY">New York</option>
+                                        <option value="NC">North Carolina</option>
+                                        <option value="ND">North Dakota</option>
+                                        <option value="OH">Ohio</option>
+                                        <option value="OK">Oklahoma</option>
+                                        <option value="OR">Oregon</option>
+                                        <option value="PA">Pennsylvania</option>
+                                        <option value="RI">Rhode Island</option>
+                                        <option value="SC">South Carolina</option>
+                                        <option value="SD">South Dakota</option>
+                                        <option value="TN">Tennessee</option>
+                                        <option value="TX">Texas</option>
+                                        <option value="UT">Utah</option>
+                                        <option value="VT">Vermont</option>
+                                        <option value="VA">Virginia</option>
+                                        <option value="WA">Washington</option>
+                                        <option value="WV">West Virginia</option>
+                                        <option value="WI">Wisconsin</option>
+                                        <option value="WY">Wyoming</option>
+                                        <option value="AS">American Samoa</option>
+                                        <option value="GU">Guam</option>
+                                        <option value="MP">Northern Mariana Islands</option>
+                                        <option value="PR">Puerto Rico</option>
+                                        <option value="UM">United States Minor Outlying Islands</option>
+                                        <option value="VI">Virgin Islands</option>
+                                    </select>	
+                                    <button type="button" class="btn btn-primary responseHouseButton">Go</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <div class="container dataforms col-10 p-0">
+            <div class="row">
+                <div class="col text-white">
+                    <input class="form-control" type="text" id="tableSearch" onkeyup="searchTable()" placeholder="Search for names..">
+                    <table id="members116">
+                    </table>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script src="./sorttable.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="./scripts.js"></script>
+        <script>getMembers("house");</script>       
+    </body>
+</html>
